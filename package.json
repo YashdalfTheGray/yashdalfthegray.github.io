@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack",
     "prod-build": "webpack -p",
-    "linter": "eslint .",
+    "linter": "tslint src/**/*.ts",
     "start": "npm run build"
   },
   "repository": {
@@ -20,12 +20,8 @@
   },
   "homepage": "https://github.com/yashdalfthegray/yashdalfthegray.github.io#readme",
   "devDependencies": {
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb-base": "^13.0.0",
-    "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-typescript": "^0.12.0",
+    "tslint": "^5.10.0",
     "typescript": "^2.9.2",
-    "typescript-eslint-parser": "^16.0.1",
     "webpack": "^4.14.0"
   }
 }
