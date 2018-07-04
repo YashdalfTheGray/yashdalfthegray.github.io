@@ -7,7 +7,8 @@
     "build": "webpack --mode=development",
     "prod-build": "webpack --mode=production",
     "linter": "tslint src/**/*.ts",
-    "start": "npm run build"
+    "start": "npm run build",
+    "clean": "npx rimraf public/**/*.ts public/bundle.js"
   },
   "repository": {
     "type": "git",
@@ -20,8 +21,10 @@
   },
   "homepage": "https://github.com/yashdalfthegray/yashdalfthegray.github.io#readme",
   "devDependencies": {
+    "ts-loader": "^4.4.2",
     "tslint": "^5.10.0",
     "typescript": "^2.9.2",
-    "webpack": "^4.14.0"
+    "webpack": "^4.14.0",
+    "webpack-cli": "^3.0.8"
   }
 }
