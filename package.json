@@ -8,7 +8,7 @@
     "prod-build": "webpack --mode=production",
     "linter": "tslint src/**/*.ts",
     "start": "npm run build",
-    "clean": "npx rimraf public/**/*.ts public/bundle.js"
+    "clean": "npx rimraf dist"
   },
   "repository": {
     "type": "git",
