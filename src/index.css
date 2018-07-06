@@ -1,0 +1,24 @@
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0px;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-item-static {
+    flex: 0 1 auto;
+}
+
+.flex-item-dynamic {
+    flex: 1 1 auto;
+}
