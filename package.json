@@ -8,7 +8,8 @@
     "prod-build": "webpack --mode=production",
     "linter": "tslint src/**/*.ts",
     "start": "npm run build",
-    "clean": "npx rimraf dist"
+    "clean": "npx rimraf dist",
+    "autoprefixer-info": "npx autoprefixer --info"
   },
   "repository": {
     "type": "git",
