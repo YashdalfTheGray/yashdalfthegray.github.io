@@ -3,6 +3,26 @@ body {
     margin: 0px;
 }
 
+::-webkit-input-placeholder {
+    color: gray;
+}
+
+:-ms-input-placeholder {
+    color: gray;
+}
+
+::-ms-input-placeholder {
+    color: gray;
+}
+
+::placeholder {
+    color: gray;
+}
+
+.page-heading {
+    margin: 16px;
+}
+
 .flex-container {
     display: flex;
 }
