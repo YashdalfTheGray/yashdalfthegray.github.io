@@ -3,6 +3,10 @@ body {
     margin: 0px;
 }
 
+.page-heading {
+    margin: 16px;
+}
+
 .flex-container {
     display: flex;
 }
