@@ -3,24 +3,14 @@ body {
     margin: 0px;
 }
 
-::-webkit-input-placeholder {
-    color: gray;
+.app-container {
+    margin: 8px;
 }
 
-:-ms-input-placeholder {
-    color: gray;
-}
-
-::-ms-input-placeholder {
-    color: gray;
-}
-
-::placeholder {
-    color: gray;
-}
-
-.page-heading {
-    margin: 16px;
+.title {
+    margin: 8px;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .flex-container {
