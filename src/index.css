@@ -3,8 +3,21 @@ body {
     margin: 0px;
 }
 
+.h-list *+* {
+    margin-left: 8px;
+}
+
+.v-list *+* {
+    margin-top: 8px;
+}
+
 .app-container {
     margin: 8px;
+}
+
+.header {
+    justify-content: space-between;
+    align-items: center;
 }
 
 .title {
@@ -13,15 +26,13 @@ body {
     font-weight: bold;
 }
 
-.flex-container {
-    display: flex;
-}
-
 .flex-row {
+    display: flex;
     flex-direction: row;
 }
 
 .flex-column {
+    display: flex;
     flex-direction: column;
 }
 
