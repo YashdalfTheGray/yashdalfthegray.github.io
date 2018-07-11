@@ -5,7 +5,7 @@ export default class App implements IComponent {
     public render() {
         const header = new Header();
         return `
-            <div class="app-container">
+            <div class="app-container flex-column">
                 ${header.render()}
             </div>
         `;
