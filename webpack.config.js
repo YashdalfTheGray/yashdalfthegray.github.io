@@ -1,5 +1,7 @@
 const path = require('path');
 
+const postcssPresentEnv = require('postcss-preset-env');
+
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = (_, argv) => ({
@@ -16,7 +18,7 @@ module.exports = (_, argv) => ({
                 use: 'ts-loader'
             },
             {
-                test: /\.css$/,
+                test: /\.p?css$/,
                 exclude: /node_modules/,
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
@@ -28,7 +30,15 @@ module.exports = (_, argv) => ({
                                 minimize: argv.mode === 'production'
                             }
                         },
-                        'postcss-loader'
+                        {
+                            loader: 'postcss-loader',
+                            options: {
+                                ident: 'postcss',
+                                plugins: () => [
+                                    postcssPresentEnv()
+                                ]
+                            }
+                        }
                     ]
                 })
             }
