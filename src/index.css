@@ -22,8 +22,20 @@ body {
 
 .title {
     margin: 8px;
-    font-size: 24px;
+    font-size: 32px;
     font-weight: bold;
+}
+
+.anchor-bar {
+    margin-right: 8px;
+}
+
+.anchor-bar span {
+    font-size: 20px;
+}
+
+.anchor-bar *+* {
+    margin-left: 16px;
 }
 
 .flex-row {
