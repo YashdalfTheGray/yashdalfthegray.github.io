@@ -5,7 +5,7 @@ export default class Header implements IComponent {
         return `
             <div class="header flex-row">
                 <span class="title">Yash Kulshrestha</span>
-                <div class="flex-row h-list">
+                <div class="flex-row h-list anchor-bar">
                     <span>About</span>
                     <span>Projects</span>
                     <span>Contact</span>
