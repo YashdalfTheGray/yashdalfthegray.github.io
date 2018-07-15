@@ -1,6 +1,6 @@
 import Component from './Component';
 
-export default class Content implements Component {
+export default class HeroBanner implements Component {
     public render() {
         return `
             <div class="app-content">
