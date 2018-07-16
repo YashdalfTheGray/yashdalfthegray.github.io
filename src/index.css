@@ -17,6 +17,24 @@ body {
     align-items: center;
 }
 
+.hero-banner {
+    position: relative;
+}
+
+.hero-background {
+    position: relative;
+    width: 100%;
+}
+
+.mugshot {
+    height: 20%;
+    width: 20%;
+    position: absolute;
+    border-radius: 50%;
+    top: 32%;
+    right: 15%;
+}
+
 .title {
     margin: 8px;
     font-size: 32px;
