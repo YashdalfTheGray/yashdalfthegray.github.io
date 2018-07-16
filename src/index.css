@@ -1,3 +1,5 @@
+/* general styles */
+
 body {
     font-family: Roboto, sans-serif;
     margin: 0px;
@@ -10,6 +12,26 @@ body {
 .v-list *+* {
     margin-top: 8px;
 }
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-item-static {
+    flex: 0 1 auto;
+}
+
+.flex-item-dynamic {
+    flex: 1 1 auto;
+}
+
+/* header styles */
 
 .header {
     margin: 16px;
@@ -35,20 +57,8 @@ body {
     margin-left: 16px;
 }
 
-.flex-row {
-    display: flex;
-    flex-direction: row;
-}
+/* hero banner styles */
 
-.flex-column {
-    display: flex;
-    flex-direction: column;
-}
-
-.flex-item-static {
-    flex: 0 1 auto;
-}
-
-.flex-item-dynamic {
-    flex: 1 1 auto;
+.hero-banner img {
+    width: 100%;
 }
