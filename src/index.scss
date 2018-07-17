@@ -47,14 +47,14 @@ body {
 
 .anchor-bar {
     margin-right: 8px;
-}
 
-.anchor-bar span {
-    font-size: 20px;
-}
+    & span {
+        font-size: 20px;
+    }
 
-.anchor-bar *+* {
-    margin-left: 16px;
+    *+* {
+        margin-left: 16px;
+    }
 }
 
 /* hero banner styles */
