@@ -1,11 +1,9 @@
 const path = require('path');
 
-const postcssPresentEnv = require('postcss-preset-env');
-
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = (_, argv) => ({
-    entry: ['./src/index.ts', './src/index.css'],
+    entry: ['./src/index.ts', './src/index.scss'],
     output: {
         path: path.resolve(__dirname, './dist'),
         filename: 'bundle.js'
@@ -18,7 +16,7 @@ module.exports = (_, argv) => ({
                 use: 'ts-loader'
             },
             {
-                test: /\.p?css$/,
+                test: /\.s?css$/,
                 exclude: /node_modules/,
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
@@ -26,19 +24,12 @@ module.exports = (_, argv) => ({
                         {
                             loader: 'css-loader',
                             options: {
-                                importLoaders: 1,
+                                importLoaders: 2,
                                 minimize: argv.mode === 'production'
                             }
                         },
-                        {
-                            loader: 'postcss-loader',
-                            options: {
-                                ident: 'postcss',
-                                plugins: () => [
-                                    postcssPresentEnv()
-                                ]
-                            }
-                        }
+                        'postcss-loader',
+                        'sass-loader'
                     ]
                 })
             }
