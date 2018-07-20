@@ -1,7 +1,11 @@
 import ArrowDown from './ArrowDown';
-import IComponent from './Component';
+import Component from './Component';
 
-export default class Header implements IComponent {
+export default class Header extends Component {
+    constructor() {
+        super('Header');
+    }
+
     public render() {
         const arrowDown = new ArrowDown();
 

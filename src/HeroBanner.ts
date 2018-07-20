@@ -1,6 +1,10 @@
 import Component from './Component';
 
-export default class HeroBanner implements Component {
+export default class HeroBanner extends Component {
+    constructor() {
+        super('HeroBanner');
+    }
+
     public render() {
         return `
             <div class="hero-banner">

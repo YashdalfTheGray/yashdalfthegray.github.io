@@ -1,6 +1,10 @@
-import IComponent from './Component';
+import Component from './Component';
 
-export default class ArrowDown implements IComponent {
+export default class ArrowDown extends Component {
+    constructor() {
+        super('ArrowDown');
+    }
+
     public render() {
         return `
             <svg
