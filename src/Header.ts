@@ -3,7 +3,18 @@ import Component from './Component';
 
 export default class Header extends Component {
     constructor() {
-        super('Header');
+        super('header');
+    }
+
+    public handleMenuArrowClick() {
+        const arrowDiv = document.querySelector('.header .anchor-menu-button');
+
+        if (arrowDiv.classList.contains('activated')) {
+            arrowDiv.classList.remove('activated');
+        }
+        else {
+            arrowDiv.classList.add('activated');
+        }
     }
 
     public render() {
@@ -17,7 +28,9 @@ export default class Header extends Component {
                     <span>Projects</span>
                     <span>Contact</span>
                 </div>
-                <div class="anchor-button">
+                <div
+                    class="anchor-menu-button"
+                    onClick="document.componentRegistry['${this.id}'].handleMenuArrowClick()">
                     ${arrowDown.render()}
                 </div>
             </div>

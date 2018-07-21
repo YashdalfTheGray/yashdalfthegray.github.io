@@ -1,3 +1,6 @@
+/* variables */
+$easeOutCirc: cubic-bezier(0.075, 0.820, 0.165, 1.000);
+
 /* mixins */
 @mixin for-phone-only {
     @media (max-width: 599px) {
@@ -73,7 +76,7 @@ body {
 .anchor-bar {
     margin-right: 8px;
 
-    & span {
+    span {
         font-size: 16px;
     }
 
@@ -86,12 +89,17 @@ body {
     }
 }
 
-.anchor-button {
+.anchor-menu-button {
     margin-right: 8px;
 
-    & svg {
+    svg {
         width: 32px;
         height: 32px;
+        transition: all 0.5s $easeOutCirc;
+    }
+
+    &.activated svg {
+        transform: rotate(180deg);
     }
 
     @include for-tablet-portrait-up {
