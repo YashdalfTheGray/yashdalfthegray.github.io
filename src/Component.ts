@@ -7,7 +7,7 @@ interface IDocumentWithRegistry extends Document {
 (document as IDocumentWithRegistry).nextId = 0;
 
 export default class Component {
-    private id: string;
+    protected id: string;
 
     constructor(type: string = 'Component') {
         this.id = `${type}${++(document as IDocumentWithRegistry).nextId}`;
