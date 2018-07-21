@@ -2,7 +2,7 @@ import Component from './Component';
 
 export default class ArrowDown extends Component {
     constructor() {
-        super('ArrowDown');
+        super('arrowdown');
     }
 
     public render() {

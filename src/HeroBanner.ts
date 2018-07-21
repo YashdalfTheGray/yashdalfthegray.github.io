@@ -2,7 +2,7 @@ import Component from './Component';
 
 export default class HeroBanner extends Component {
     constructor() {
-        super('HeroBanner');
+        super('herobanner');
     }
 
     public render() {

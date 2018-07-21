@@ -4,7 +4,7 @@ import HeroBanner from './HeroBanner';
 
 export default class App extends Component {
     constructor() {
-        super('App');
+        super('app');
     }
 
     public render() {
