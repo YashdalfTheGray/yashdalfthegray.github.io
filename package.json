@@ -23,17 +23,18 @@
   },
   "homepage": "https://github.com/yashdalfthegray/yashdalfthegray.github.io#readme",
   "devDependencies": {
-    "autoprefixer": "^8.6.4",
-    "css-loader": "^0.28.11",
+    "autoprefixer": "^9.0.1",
+    "css-loader": "^1.0.0",
+    "cssnano": "^4.0.3",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "node-sass": "^4.9.2",
-    "postcss-loader": "^2.1.5",
+    "postcss-loader": "^2.1.6",
     "sass-loader": "^7.0.3",
     "style-loader": "^0.21.0",
     "ts-loader": "^4.4.2",
-    "tslint": "^5.10.0",
+    "tslint": "^5.11.0",
     "typescript": "^2.9.2",
-    "webpack": "^4.14.0",
-    "webpack-cli": "^3.0.8"
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.1.0"
   }
 }
