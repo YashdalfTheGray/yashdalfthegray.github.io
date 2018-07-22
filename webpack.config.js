@@ -1,5 +1,7 @@
 const path = require('path');
 
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = (_, argv) => ({
@@ -23,12 +25,17 @@ module.exports = (_, argv) => ({
                     use: [
                         {
                             loader: 'css-loader',
+                            options: { importLoaders: 2 }
+                        },
+                        {
+                            loader: 'postcss-loader',
                             options: {
-                                importLoaders: 2,
-                                minimize: argv.mode === 'production'
+                                ident: 'postcss',
+                                plugins: () => argv.mode === 'production' ?
+                                [autoprefixer(), cssnano()] :
+                                [autoprefixer()]
                             }
                         },
-                        'postcss-loader',
                         'sass-loader'
                     ]
                 })
