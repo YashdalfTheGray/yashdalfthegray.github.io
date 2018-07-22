@@ -10,3 +10,6 @@ For no particularly unique reason, I decided to write my personal website with n
 
 * [Complete guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 * [Reactive UI’s with Vanilla JS](https://css-tricks.com/reactive-uis-vanillajs-part-1-pure-functional-style/)
+* [The SASS `&`](https://css-tricks.com/the-sass-ampersand/)
+* [Using CSS Transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+* [Easing functions as SASS variables](https://gist.github.com/davidpett/5862318)
