@@ -5,6 +5,7 @@
     ],
     "jsRules": {},
     "rules": {
+        "arrow-parens": [false],
         "one-line": [true, "check-open-space", "check-whitespace"],
         "quotemark": [true, "single", "avoid-template", "avoid-escape"]
     },
