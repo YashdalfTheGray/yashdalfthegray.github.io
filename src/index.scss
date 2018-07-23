@@ -107,6 +107,22 @@ body {
     }
 }
 
+.anchor-menu {
+    justify-content: space-evenly;
+    align-items: center;
+    display: none;
+    transition: all 0.5s $easeOutCirc;
+
+    span {
+        font-size: 16px;
+        margin: 8px;
+    }
+
+    &.visible {
+        display: flex;
+    }
+}
+
 /* hero banner styles */
 
 .hero-banner img {
