@@ -73,10 +73,16 @@ body {
     font-weight: bold;
 }
 
+.header-anchor {
+    color: #000;
+    text-decoration: none;
+}
+
 .anchor-bar {
     margin-right: 8px;
 
-    span {
+    a {
+        @extend .header-anchor;
         font-size: 16px;
     }
 
@@ -113,7 +119,8 @@ body {
     display: none;
     transition: all 0.5s $easeOutCirc;
 
-    span {
+    a {
+        @extend .header-anchor;
         font-size: 16px;
         margin: 8px;
     }
@@ -127,4 +134,10 @@ body {
 
 .hero-banner img {
     width: 100%;
+}
+
+/* about styles */
+
+.about-section {
+    margin: 16px;
 }

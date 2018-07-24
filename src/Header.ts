@@ -21,14 +21,22 @@ export default class Header extends Component {
     }
 
     public render() {
-        const anchors = ['About', 'Projects', 'Contact'];
+        const anchors = [
+            { name: 'About', anchor: 'anchor_about' },
+            { name: 'Projects', anchor: 'anchor_projects' },
+            { name: 'Contact', anchor: 'anchor_contact' }
+        ];
+        const renderedAnchors = anchors
+        .map(a => `<a class="header-anchor" href="#${a.anchor}">${a.name}</a>`)
+        .join('\n');
+
         const arrowDown = new ArrowDown();
 
         return `
             <div class="header flex-row">
                 <span class="title">Yash Kulshrestha</span>
                 <div class="flex-row h-list anchor-bar">
-                    ${anchors.map(a => `<span>${a}</span>`).join('\n')}
+                    ${renderedAnchors}
                 </div>
                 <div
                     class="anchor-menu-button"
@@ -37,7 +45,7 @@ export default class Header extends Component {
                 </div>
             </div>
             <div class="anchor-menu flex-column">
-                ${anchors.map(a => `<span>${a}</span>`).join('\n')}
+                ${renderedAnchors}
             </div>
         `;
     }
