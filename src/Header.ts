@@ -22,9 +22,9 @@ export default class Header extends Component {
 
     public render() {
         const anchors = [
-            { name: 'About', anchor: 'anchor_about' },
-            { name: 'Projects', anchor: 'anchor_projects' },
-            { name: 'Contact', anchor: 'anchor_contact' }
+            { name: 'About', anchor: 'about' },
+            { name: 'Projects', anchor: 'projects' },
+            { name: 'Contact', anchor: 'contact' }
         ];
         const renderedAnchors = anchors
         .map(a => `<a class="header-anchor" href="#${a.anchor}">${a.name}</a>`)
