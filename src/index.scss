@@ -63,6 +63,11 @@ body {
     margin: 16px;
 }
 
+.anchor-link {
+    color: #000;
+    text-decoration: none;
+}
+
 /* header styles */
 
 .header {
@@ -77,16 +82,11 @@ body {
     font-weight: bold;
 }
 
-.header-anchor {
-    color: #000;
-    text-decoration: none;
-}
-
 .anchor-bar {
     margin-right: 8px;
 
     a {
-        @extend .header-anchor;
+        @extend .anchor-link;
         font-size: 16px;
     }
 
@@ -124,7 +124,7 @@ body {
     transition: all 0.5s $easeOutCirc;
 
     a {
-        @extend .header-anchor;
+        @extend .anchor-link;
         font-size: 16px;
         margin: 8px;
     }
@@ -149,7 +149,6 @@ body {
 /* projects styles */
 
 .projects-section {
-    width: 100%;
-    height: 800px;
-    background-color: #C5CAE9;
+    @extend .flex-row;
+    margin: 16px;
 }
