@@ -148,6 +148,10 @@ body {
 
 /* projects styles */
 
+.projects-fallback {
+    margin: 16px;
+}
+
 .projects-section {
     @extend .flex-row;
     margin: 16px;

@@ -6,6 +6,10 @@ export default class Projects extends Component {
             <h2 class="section-heading">
                 <a class="anchor-link" name="projects">Projects</a>
             </h2>
+            <div class="projects-fallback">
+                You can find my active pet projects on my&nbsp;
+                <a href="https://github.com/YashdalfTheGray">Github page</a>!
+            </div>
             <div class="projects-section">
                 <p>These are some of my pet projects on Github!</p>
             </div>
