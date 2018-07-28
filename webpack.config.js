@@ -47,5 +47,8 @@ module.exports = (_, argv) => ({
     },
     plugins: [
         new ExtractTextPlugin('index.css')
-    ]
+    ],
+    stats: {
+        colors: true
+    }
 });
