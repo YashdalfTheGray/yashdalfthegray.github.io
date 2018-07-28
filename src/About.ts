@@ -1,6 +1,10 @@
 import Component from './Component';
 
 export default class About extends Component {
+    constructor() {
+        super('about');
+    }
+
     public render() {
         /* tslint:disable:max-line-length */
         return `

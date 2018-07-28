@@ -1,6 +1,10 @@
 import Component from './Component';
 
 export default class Loading extends Component {
+    constructor() {
+        super('loading');
+    }
+
     public render() {
         /* tslint:disable:max-line-length */
         return `
