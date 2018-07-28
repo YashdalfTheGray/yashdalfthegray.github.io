@@ -26,6 +26,14 @@ $easeOutCirc: cubic-bezier(0.075, 0.820, 0.165, 1.000);
     }
 }
 
+/* animations */
+
+@keyframes spin {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
 /* general styles */
 
 body {
@@ -66,6 +74,19 @@ body {
 .anchor-link {
     color: #000;
     text-decoration: none;
+}
+
+/* loading styles */
+
+.loading-container {
+    @extend .flex-row;
+    @extend .flex-item-dynamic;
+    justify-content: center;
+    align-items: center;
+}
+
+.rotate-infinitely {
+    animation: spin 1s linear infinite;
 }
 
 /* header styles */
