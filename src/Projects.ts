@@ -3,7 +3,7 @@ import Component from './Component';
 import Loading from './Loading';
 
 export default class Projects extends Component {
-    constructor() {
+    constructor(projects: string[]) {
         super('projects');
     }
 
