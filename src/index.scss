@@ -71,6 +71,10 @@ body {
     margin: 16px;
 }
 
+.section-margin {
+    margin: 8px 16px;
+}
+
 .anchor-link {
     color: #000;
     text-decoration: none;
@@ -164,16 +168,16 @@ body {
 /* about styles */
 
 .about-section {
-    margin: 16px;
+    @extend .section-margin;
 }
 
 /* projects styles */
 
 .projects-fallback {
-    margin: 16px;
+    @extend .section-margin;
 }
 
 .projects-section {
     @extend .flex-row;
-    margin: 16px;
+    @extend .section-margin;
 }
