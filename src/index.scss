@@ -178,6 +178,6 @@ body {
 }
 
 .projects-section {
-    @extend .flex-row;
+    @extend .flex-column;
     @extend .section-margin;
 }

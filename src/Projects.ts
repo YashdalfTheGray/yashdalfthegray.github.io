@@ -1,9 +1,12 @@
 import Component from './Component';
 
+import { IGithubRepo } from './types';
+
 import Loading from './Loading';
+import ProjectCard from './ProjectCard';
 
 interface IProjectState {
-    projectDetails: object[];
+    projectDetails: IGithubRepo[];
 }
 
 export default class Projects extends Component {
@@ -35,10 +38,11 @@ export default class Projects extends Component {
         }
     }
 
-    public renderProjects(projects) {
+    public renderProjects(projects: IGithubRepo[]) {
         return `
             <div class="projects-section">
                 <p>These are some of my pet projects on Github!</p>
+                ${projects.map(p => (new ProjectCard()).render(p)).join('\n')}
             </div>
         `;
     }
