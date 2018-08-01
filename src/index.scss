@@ -181,3 +181,23 @@ body {
     @extend .flex-column;
     @extend .section-margin;
 }
+
+.projects-list {
+    display: flex;
+
+    @include for-phone-only {
+        flex-direction: column;
+
+        & *+* {
+            margin-top: 8px;
+        }
+    }
+
+    @include for-tablet-portrait-up {
+        flex-flow: row wrap;
+
+        .project-card {
+            margin: 8px;
+        }
+    }
+}
