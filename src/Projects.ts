@@ -29,6 +29,7 @@ export default class Projects extends Component {
             return;
         }
         else {
+            // TODO - yashdalfthegray 8/1 error logic because github throttles are real
             this.state.projectDetails = await Promise.all(projects.map(async (p) => {
                 const response = await fetch(`https://api.github.com/repos/yashdalfthegray/${p}`);
                 return response.json();
@@ -42,7 +43,9 @@ export default class Projects extends Component {
         return `
             <div class="projects-section">
                 <p>These are some of my pet projects on Github!</p>
-                ${projects.map(p => (new ProjectCard()).render(p)).join('\n')}
+                <div class="projects-list">
+                    ${projects.map(p => (new ProjectCard()).render(p)).join('\n')}
+                </div>
             </div>
         `;
     }
