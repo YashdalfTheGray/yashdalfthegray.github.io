@@ -184,6 +184,8 @@ body {
 
 .projects-list {
     display: flex;
+    justify-content: center;
+    align-items: center;
 
     @include for-phone-only {
         flex-direction: column;
@@ -199,5 +201,22 @@ body {
         .project-card {
             margin: 8px;
         }
+    }
+}
+
+.project-card {
+    height: 160px;
+    width: 320px;
+    box-shadow: -4px -4px 12px -4px rgba(0, 0, 0, 0.5);
+    border: solid 1px #e0e0e0;
+    transition: all 0.25s ease-out;
+    @extend .flex-row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: unset;
+        border: solid 1px #82b1ff;
     }
 }

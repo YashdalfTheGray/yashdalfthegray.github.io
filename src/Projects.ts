@@ -33,6 +33,7 @@ export default class Projects extends Component {
             this.state.projectDetails = await Promise.all(projects.map(async (p) => {
                 const response = await fetch(`https://api.github.com/repos/yashdalfthegray/${p}`);
                 return response.json();
+                // return { name: p } as IGithubRepo;
             }));
 
             projectsContainer.innerHTML = this.renderProjects(this.state.projectDetails);
