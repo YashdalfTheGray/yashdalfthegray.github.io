@@ -219,4 +219,8 @@ body {
         box-shadow: unset;
         border: solid 1px #82b1ff;
     }
+
+    a {
+        @extend .anchor-link;
+    }
 }
