@@ -5,3 +5,10 @@ export interface IGithubRepo {
     language: string;
     html_url: string;
 }
+
+export interface IGithubThrottleError {
+    message: string;
+    documentation_url: string;
+}
+
+export interface IRepoOrError extends IGithubRepo, IGithubThrottleError {}
