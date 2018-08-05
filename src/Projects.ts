@@ -1,12 +1,12 @@
 import Component from './Component';
 
-import { IGithubRepo } from './types';
+import { IRepoOrError } from './types';
 
 import Loading from './Loading';
 import ProjectCard from './ProjectCard';
 
 interface IProjectState {
-    projectDetails: IGithubRepo[];
+    projectDetails: IRepoOrError[];
 }
 
 export default class Projects extends Component {
@@ -33,22 +33,10 @@ export default class Projects extends Component {
             this.state.projectDetails = await Promise.all(projects.map(async (p) => {
                 const response = await fetch(`https://api.github.com/repos/yashdalfthegray/${p}`);
                 return response.json();
-                // return { name: p } as IGithubRepo;
             }));
 
             projectsContainer.innerHTML = this.renderProjects(this.state.projectDetails);
         }
-    }
-
-    public renderProjects(projects: IGithubRepo[]) {
-        return `
-            <div class="projects-section">
-                <p>These are some of my pet projects on Github!</p>
-                <div class="projects-list">
-                    ${projects.map(p => (new ProjectCard()).render(p)).join('\n')}
-                </div>
-            </div>
-        `;
     }
 
     public renderFallback() {
@@ -56,6 +44,23 @@ export default class Projects extends Component {
             <div class="projects-fallback">
                 You can find my active pet projects on my&nbsp;
                 <a href="https://github.com/YashdalfTheGray">Github page</a>!
+            </div>
+        `;
+    }
+
+    public renderProjects(projects: IRepoOrError[]) {
+        const toShow = projects.filter(p => !p.message);
+
+        if (toShow.length === 0) {
+            return this.renderFallback();
+        }
+
+        return `
+            <div class="projects-section">
+                <p>These are some of my pet projects on Github!</p>
+                <div class="projects-list">
+                    ${projects.map(p => (new ProjectCard()).render(p)).join('\n')}
+                </div>
             </div>
         `;
     }
