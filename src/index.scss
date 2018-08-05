@@ -231,4 +231,16 @@ body {
         justify-content: space-around;
         align-items: flex-start;
     }
+
+    .card-heading {
+        font-weight: bold;
+    }
+
+    .card-language {
+        font-style: italic;
+    }
+
+    *+* {
+        margin-top: 16px;
+    }
 }
