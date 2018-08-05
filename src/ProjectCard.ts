@@ -8,11 +8,13 @@ constructor() {
     }
 
     public render(props: IGithubRepo) {
-        const { id, name, html_url } = props;
+        const { id, name, description, html_url, language } = props;
         return `
             <div class="project-card" id="project-card-${id}">
-                <a href="${html_url}" target="_blank">
-                    <span>${name}</span>
+                <a href="${html_url}" target="_blank" class="v-list">
+                    <span class="card-heading">${name}</span>
+                    <span class="card-description">${description}</span>
+                    <span class="card-language">${language}</span>
                 </a>
             </div>
         `;

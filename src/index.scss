@@ -157,6 +157,10 @@ body {
     &.visible {
         display: flex;
     }
+
+    @include for-tablet-portrait-up {
+        display: none;
+    }
 }
 
 /* hero banner styles */
@@ -222,5 +226,9 @@ body {
 
     a {
         @extend .anchor-link;
+        padding: 8px;
+        @extend .flex-column;
+        justify-content: space-around;
+        align-items: flex-start;
     }
 }
