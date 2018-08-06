@@ -244,3 +244,9 @@ body {
         margin-top: 16px;
     }
 }
+
+/* contact styles */
+
+.contacts-container {
+    @extend .section-margin;
+}
