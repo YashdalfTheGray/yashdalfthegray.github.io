@@ -1,6 +1,7 @@
 import Component from './Component';
 
 import About from './About';
+import Contact from './Contact';
 import Header from './Header';
 import HeroBanner from './HeroBanner';
 import Projects from './Projects';
@@ -31,6 +32,7 @@ export default class App extends Component {
         const heroBanner = new HeroBanner();
         const about = new About();
         const projects = new Projects(this.state.projectsList);
+        const contact = new Contact();
 
         return `
             <div class="flex-column">
@@ -38,6 +40,7 @@ export default class App extends Component {
                 ${heroBanner.render()}
                 ${about.render()}
                 ${projects.render()}
+                ${contact.render()}
             </div>
         `;
     }
