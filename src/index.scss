@@ -190,21 +190,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-flow: row wrap;
 
-    @include for-phone-only {
-        flex-direction: column;
-
-        & *+* {
-            margin-top: 8px;
-        }
-    }
-
-    @include for-tablet-portrait-up {
-        flex-flow: row wrap;
-
-        .project-card {
-            margin: 8px;
-        }
+    .project-card {
+        margin: 8px;
     }
 }
 
@@ -218,6 +207,7 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    border-radius: 8px;
 
     &:hover {
         box-shadow: unset;
@@ -238,6 +228,8 @@ body {
 
     .card-language {
         font-style: italic;
+        color: #757575;
+
     }
 
     *+* {
