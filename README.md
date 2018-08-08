@@ -13,3 +13,4 @@ For no particularly unique reason, I decided to write my personal website with n
 * [The SASS `&`](https://css-tricks.com/the-sass-ampersand/)
 * [Using CSS Transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
 * [Easing functions as SASS variables](https://gist.github.com/davidpett/5862318)
+* [Simple Icons](https://simpleicons.org/)
