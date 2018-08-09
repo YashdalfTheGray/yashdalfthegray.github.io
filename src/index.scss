@@ -87,10 +87,12 @@ body {
     @extend .flex-item-dynamic;
     justify-content: center;
     align-items: center;
-}
 
-.rotate-infinitely {
-    animation: spin 1s linear infinite;
+    svg {
+        height: 24px;
+        width: 24px;
+        animation: spin 1s linear infinite;
+    }
 }
 
 /* header styles */

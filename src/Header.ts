@@ -1,5 +1,5 @@
-import ArrowDown from './ArrowDown';
 import Component from './Component';
+import * as arrowDown from './icons/arrowdown.svg';
 
 export default class Header extends Component {
     constructor() {
@@ -30,8 +30,6 @@ export default class Header extends Component {
         .map(a => `<a class="header-anchor" href="#${a.anchor}">${a.name}</a>`)
         .join('\n');
 
-        const arrowDown = new ArrowDown();
-
         return `
             <div class="header flex-row">
                 <span class="title">Yash Kulshrestha</span>
@@ -41,7 +39,7 @@ export default class Header extends Component {
                 <div
                     class="anchor-menu-button"
                     onClick="document.componentRegistry['${this.id}'].handleMenuArrowClick()">
-                    ${arrowDown.render()}
+                    ${arrowDown}
                 </div>
             </div>
             <div class="anchor-menu flex-column">
