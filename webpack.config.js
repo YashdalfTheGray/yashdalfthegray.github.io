@@ -39,6 +39,11 @@ module.exports = (_, argv) => ({
                         'sass-loader'
                     ]
                 })
+            },
+            {
+                test: /\.svg$/,
+                exclude: /node_modules/,
+                use: 'svg-inline-loader'
             }
         ]
     },
