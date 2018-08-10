@@ -1,7 +1,8 @@
 import Component from '../Component';
+import contacts, { IContactList } from '../contacts';
 
 interface IContactState {
-    contacts: Array<{ name: string, link: string }>;
+    contacts: IContactList;
 }
 
 export default class Contact extends Component {
@@ -9,18 +10,7 @@ export default class Contact extends Component {
 
     constructor() {
         super('contact');
-        this.state = {
-            contacts: [
-                { name: 'Github', link: 'https://github.com/YashdalfTheGray' },
-                { name: 'Twitter', link: 'https://twitter.com/YashdalfTheGray' },
-                { name: 'LinkedIn', link: 'https://www.linkedin.com/in/yash-kulshrestha-00847965' },
-                { name: 'Steam', link: 'http://steamcommunity.com/id/YashdalfTheGray/' },
-                { name: 'Twitch', link: 'https://www.twitch.tv/yashdalfthegray' },
-                { name: 'Youtube', link: 'https://www.youtube.com/channel/UCWcKiD0E1CyjvY4CSN_Ealw' },
-                { name: 'Google+', link: 'https://plus.google.com/+YashKulshrestha12' },
-                { name: 'Email', link: 'mailto:contact@yashkulshrestha.com' }
-            ]
-        };
+        this.state = { contacts };
     }
 
     public render() {
