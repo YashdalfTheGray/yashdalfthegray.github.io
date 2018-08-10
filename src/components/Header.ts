@@ -1,5 +1,5 @@
-import Component from './Component';
-import * as arrowDown from './icons/arrowdown.svg';
+import Component from '../Component';
+import * as arrowDown from '../icons/arrowdown.svg';
 
 export default class Header extends Component {
     constructor() {

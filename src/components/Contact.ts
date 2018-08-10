@@ -1,4 +1,4 @@
-import Component from './Component';
+import Component from '../Component';
 
 interface IContactState {
     contacts: Array<{ name: string, link: string }>;

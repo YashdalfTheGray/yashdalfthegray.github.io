@@ -1,6 +1,6 @@
-import Component from './Component';
+import Component from '../Component';
 
-import { IGithubRepo } from './types';
+import { IGithubRepo } from '../types';
 
 export default class ProjectCard extends Component {
 constructor() {

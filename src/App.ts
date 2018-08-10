@@ -1,10 +1,10 @@
 import Component from './Component';
 
-import About from './About';
-import Contact from './Contact';
-import Header from './Header';
-import HeroBanner from './HeroBanner';
-import Projects from './Projects';
+import About from './components/About';
+import Contact from './components/Contact';
+import Header from './components/Header';
+import HeroBanner from './components/HeroBanner';
+import Projects from './components/Projects';
 
 interface IAppState {
     projectsList: string[];

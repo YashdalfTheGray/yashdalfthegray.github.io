@@ -1,6 +1,6 @@
-import Component from './Component';
+import Component from '../Component';
 
-import { IRepoOrError } from './types';
+import { IRepoOrError } from '../types';
 
 import Loading from './Loading';
 import ProjectCard from './ProjectCard';
