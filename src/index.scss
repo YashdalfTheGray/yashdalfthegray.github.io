@@ -241,6 +241,18 @@ body {
 
 /* contact styles */
 
-.contacts-container {
+.contacts-list {
     @extend .section-margin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+
+    span {
+        margin: 8px;
+        width: 24px;
+        height: 24px;
+        border: 16px solid;
+        border-radius: 50%;
+    }
 }
