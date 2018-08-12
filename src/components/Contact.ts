@@ -1,8 +1,9 @@
 import Component from '../Component';
-import contacts, { IContactList } from '../contacts';
+import contacts, { IContact } from '../contacts';
+import ContactLink from './ContactLink';
 
 interface IContactState {
-    contacts: IContactList;
+    contacts: IContact[];
 }
 
 export default class Contact extends Component {
@@ -18,8 +19,8 @@ export default class Contact extends Component {
             <h2 class="section-heading">
                 <a class="anchor-link" name="contact">Contact</a>
             </h2>
-            <div class="contacts-container">
-                Get in touch with me!
+            <div class="contacts-list">
+                ${this.state.contacts.map(c => (new ContactLink()).render(c)).join('\n')}
             </div>
         `;
     }
