@@ -8,7 +8,7 @@ export default class ContactLink extends Component {
 
     public render(props: IContact) {
         return `
-            <span>${props.icon}</span>
+            <span><a href="${props.link}" target="_blank">${props.icon}</a></span>
         `;
     }
 }
