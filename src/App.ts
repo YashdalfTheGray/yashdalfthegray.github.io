@@ -2,6 +2,7 @@ import Component from './Component';
 
 import About from './components/About';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 import Header from './components/Header';
 import HeroBanner from './components/HeroBanner';
 import Projects from './components/Projects';
@@ -33,6 +34,7 @@ export default class App extends Component {
         const about = new About();
         const projects = new Projects(this.state.projectsList);
         const contact = new Contact();
+        const footer = new Footer();
 
         return `
             <div class="flex-column">
@@ -41,6 +43,7 @@ export default class App extends Component {
                 ${about.render()}
                 ${projects.render()}
                 ${contact.render()}
+                ${footer.render()}
             </div>
         `;
     }

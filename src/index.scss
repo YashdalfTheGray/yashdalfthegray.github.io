@@ -261,3 +261,21 @@ body {
         }
     }
 }
+
+/* footer styles */
+
+.footer {
+    @extend .section-margin;
+    @extend .flex-row;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        font-size: 12px;
+        color: #909090;
+
+        a {
+            color: #909090;
+        }
+    }
+}
