@@ -34,6 +34,15 @@ $easeOutCirc: cubic-bezier(0.075, 0.820, 0.165, 1.000);
     }
 }
 
+@keyframes raise-lower {
+    0%, 100% {
+        box-shadow: unset;
+    }
+    50% {
+        box-shadow: 0px 0px 8px 2px #aaa;
+    }
+}
+
 /* general styles */
 
 body {
@@ -255,6 +264,10 @@ body {
         border: 16px solid;
         border-radius: 50%;
         border-color: white;
+
+        &:hover {
+            animation: raise-lower 0.5s linear 0s 1;
+        }
 
         a {
             cursor: pointer;
