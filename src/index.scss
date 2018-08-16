@@ -124,6 +124,12 @@ body {
     a {
         @extend .anchor-link;
         font-size: 16px;
+        padding: 2px 0px;
+    }
+
+    a:hover {
+        border-bottom: solid 2px #82b1ff;
+        padding-bottom: 0px;
     }
 
     *+* {
@@ -163,6 +169,12 @@ body {
         @extend .anchor-link;
         font-size: 16px;
         margin: 8px;
+        padding: 2px 0px;
+    }
+
+    a:hover {
+        border-bottom: solid 2px #82b1ff;
+        padding-bottom: 0px;
     }
 
     &.visible {
