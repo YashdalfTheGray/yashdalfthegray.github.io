@@ -9,6 +9,7 @@
     "prod-build": "webpack --mode=production",
     "server": "http-server ./ -p 8000",
     "linter": "tslint src/**/*.ts",
+    "linter-fix": "tslint --fix src/**/*.ts",
     "start": "concurrently -c cyan,green \"npm:watch-build\" \"npm:server\"",
     "clean": "npx rimraf dist",
     "autoprefixer-info": "npx autoprefixer --info"
