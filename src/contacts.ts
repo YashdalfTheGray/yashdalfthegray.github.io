@@ -67,7 +67,7 @@ const contacts: IContact[] = [
     name: 'Email',
     link: 'mailto:contact@yashkulshrestha.com',
     icon: email
-   }
+  }
 ];
 
 export default contacts;

@@ -18,12 +18,12 @@ export default class App extends Component {
     super('app');
     this.state = {
       projectsList: [
-        'hue-remote',
-        'onboard',
-        'light-control',
-        'docker-dashboard',
         'auto-ngtemplate-loader',
-        'cluster-cleanup'
+        'hue-remote',
+        'cluster-cleanup',
+        'colorcode',
+        'docker-dashboard',
+        'simple-load-tester'
       ]
     };
   }

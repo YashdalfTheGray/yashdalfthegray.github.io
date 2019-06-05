@@ -13,8 +13,7 @@ export default class Header extends Component {
     if (arrowDiv.classList.contains('activated')) {
       arrowDiv.classList.remove('activated');
       anchorMenu.classList.remove('visible');
-    }
-    else {
+    } else {
       arrowDiv.classList.add('activated');
       anchorMenu.classList.add('visible');
     }
@@ -27,8 +26,8 @@ export default class Header extends Component {
       { name: 'Contact', anchor: 'contact' }
     ];
     const renderedAnchors = anchors
-    .map(a => `<a class="header-anchor" href="#${a.anchor}">${a.name}</a>`)
-    .join('\n');
+      .map(a => `<a class="header-anchor" href="#${a.anchor}">${a.name}</a>`)
+      .join('\n');
 
     return `
       <div class="header flex-row">
@@ -38,7 +37,9 @@ export default class Header extends Component {
         </div>
         <div
           class="anchor-menu-button"
-          onClick="document.componentRegistry['${this.id}'].handleMenuArrowClick()">
+          onClick="document.componentRegistry['${
+            this.id
+          }'].handleMenuArrowClick()">
           ${arrowDown}
         </div>
       </div>

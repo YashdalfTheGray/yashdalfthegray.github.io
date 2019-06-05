@@ -3,11 +3,11 @@ import * as refresh from '../icons/refresh.svg';
 
 export default class Loading extends Component {
   constructor() {
-  super('loading');
+    super('loading');
   }
 
   public render() {
-  return `
+    return `
     <div class="loading-container">
     ${refresh}&nbsp;<span>Loading</span>
     </div>

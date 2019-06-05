@@ -15,15 +15,17 @@ The entire website is components based. I didn't want to write up a huge `index.
     <div id="app"></div>
 </body>
 <script type="text/javascript">
-class MyApp {
-    render(props) {
-        return `
-            <h1>This webpage belongs to ${props.name}</h1>
-        `;
+    class MyApp {
+        render(props) {
+            return `
+                <h1>This webpage belongs to ${props.name}</h1>
+            `;
+        }
     }
-}
 
-document.querySelector('div#app').innerHTML = (new MyApp()).render({ name: 'Yash' });
+    document.querySelector('div#app').innerHTML = new MyApp().render({
+        name: 'Yash'
+    });
 </script>
 ```
 
@@ -43,9 +45,9 @@ You _could_ agrue that Typescript and Webpack are both including polyfills in my
 
 ## Resources
 
-* [Complete guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-* [Reactive UI’s with Vanilla JS](https://css-tricks.com/reactive-uis-vanillajs-part-1-pure-functional-style/)
-* [The SASS `&`](https://css-tricks.com/the-sass-ampersand/)
-* [Using CSS Transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
-* [Easing functions as SASS variables](https://gist.github.com/davidpett/5862318)
-* [Simple Icons](https://simpleicons.org/)
+-   [Complete guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+-   [Reactive UI’s with Vanilla JS](https://css-tricks.com/reactive-uis-vanillajs-part-1-pure-functional-style/)
+-   [The SASS `&`](https://css-tricks.com/the-sass-ampersand/)
+-   [Using CSS Transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+-   [Easing functions as SASS variables](https://gist.github.com/davidpett/5862318)
+-   [Simple Icons](https://simpleicons.org/)
