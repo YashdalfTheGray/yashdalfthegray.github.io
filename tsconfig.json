@@ -10,7 +10,7 @@
     "declaration": false,
     "noImplicitAny": false,
     "noImplicitUseStrict": false,
-    "removeComments": false,
+    "removeComments": true,
     "noLib": false,
     "preserveConstEnums": true,
     "suppressImplicitAnyIndexErrors": true,
