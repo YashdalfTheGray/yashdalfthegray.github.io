@@ -2,7 +2,9 @@ const path = require('path');
 
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
+const CompressionWebpackPlugin = require('compression-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = (_, argv) => ({
   entry: ['./src/index.ts', './src/index.scss'],
@@ -31,9 +33,10 @@ module.exports = (_, argv) => ({
               loader: 'postcss-loader',
               options: {
                 ident: 'postcss',
-                plugins: () => argv.mode === 'production' ?
-                [autoprefixer(), cssnano()] :
-                [autoprefixer()]
+                plugins: () =>
+                  argv.mode === 'production'
+                    ? [autoprefixer(), cssnano()]
+                    : [autoprefixer()]
               }
             },
             'sass-loader'
@@ -50,9 +53,13 @@ module.exports = (_, argv) => ({
   resolve: {
     extensions: ['.ts', '.js', '.css']
   },
-  plugins: [
-    new ExtractTextPlugin('index.css')
-  ],
+  plugins: [new ExtractTextPlugin('index.css')]
+    .concat(
+      argv.mode === 'development'
+        ? [new BundleAnalyzerPlugin({ openAnalyzer: false })]
+        : []
+    )
+    .concat(argv.mode === 'production' ? [new CompressionWebpackPlugin()] : []),
   stats: {
     colors: true
   }
