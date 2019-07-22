@@ -29,11 +29,11 @@ The entire website is components based. I didn't want to write up a huge `index.
 </script>
 ```
 
-It's very React-like in it's structure but isn't actually React, or any framework for that matter. The only place where this gets complicated is accessing the members of the class (eg. click handlers) from within the rendered HTML. That's a little advanced for this file but take a look at `src/Component.ts` and `src/components/Header.ts` to see how we make that happen.
+It's very React-like in it's structure but isn't actually React, or any framework for that matter. The only place where this gets complicated is accessing the members of the class (eg. click handlers) from within the rendered HTML. That's a little advanced for this readme but take a look at `src/Component.ts` and `src/components/Header.ts` to see how we can make that happen.
 
 ## Results
 
-The result of just using Javascript and CSS without any libraries or frameworks is that all this code ships in a small 7.4kB package (6.3kB for the Javascript and 1.1kB for the CSS) and the website loads up in less than 500ms on fast connections.
+The result of just using Javascript and CSS without any libraries or frameworks is that all this code ships in a small 7.4kB package (6.3kB for the Javascript and 1.1kB for the CSS) gzipped and the website loads up in less than 500ms on fast connections.
 
 Plus I get more experience with media queries, CSS Animations and SASS!
 
