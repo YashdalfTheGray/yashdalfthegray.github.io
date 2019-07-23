@@ -21,12 +21,22 @@ export default class Header extends Component {
 
   public render() {
     const anchors = [
-      { name: 'About', anchor: 'about' },
-      { name: 'Projects', anchor: 'projects' },
-      { name: 'Contact', anchor: 'contact' }
+      { name: 'About', href: '#about', external: false },
+      { name: 'Projects', href: '#projects', external: false },
+      { name: 'Contact', href: '#contact', external: false },
+      {
+        name: 'Blog',
+        href: 'https://medium.com/@yash.kulshrestha',
+        external: true
+      }
     ];
     const renderedAnchors = anchors
-      .map(a => `<a class="header-anchor" href="#${a.anchor}">${a.name}</a>`)
+      .map(
+        a =>
+          `<a class="header-anchor" href="${a.href}" ${
+            a.external ? 'target="_blank"' : ''
+          }>${a.name}</a>`
+      )
       .join('\n');
 
     return `
