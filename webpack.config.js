@@ -2,15 +2,18 @@ const path = require('path');
 
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
-const CompressionWebpackPlugin = require('compression-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const Visualizer = require('webpack-visualizer-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+const isDev = mode => mode === 'development';
+const isProd = mode => mode === 'production';
 
 module.exports = (_, argv) => ({
   entry: ['./src/index.ts', './src/index.scss'],
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: 'bundle.js'
+    filename: '[name].js'
   },
   module: {
     rules: [
@@ -20,28 +23,31 @@ module.exports = (_, argv) => ({
         use: 'ts-loader'
       },
       {
-        test: /\.s?css$/,
+        test: /\.(sa|sc|c)ss$/,
         exclude: /node_modules/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            {
-              loader: 'css-loader',
-              options: { importLoaders: 2 }
-            },
-            {
-              loader: 'postcss-loader',
-              options: {
-                ident: 'postcss',
-                plugins: () =>
-                  argv.mode === 'production'
-                    ? [autoprefixer(), cssnano()]
-                    : [autoprefixer()]
-              }
-            },
-            'sass-loader'
-          ]
-        })
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: isDev(argv.mode)
+            }
+          },
+          {
+            loader: 'css-loader',
+            options: { importLoaders: 2 }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              ident: 'postcss',
+              plugins: () =>
+                isProd(argv.mode)
+                  ? [autoprefixer(), cssnano()]
+                  : [autoprefixer()]
+            }
+          },
+          'sass-loader'
+        ]
       },
       {
         test: /\.svg$/,
@@ -53,13 +59,19 @@ module.exports = (_, argv) => ({
   resolve: {
     extensions: ['.ts', '.js', '.css']
   },
-  plugins: [new ExtractTextPlugin('index.css')]
-    .concat(
-      argv.mode === 'development'
-        ? [new BundleAnalyzerPlugin({ openAnalyzer: false })]
-        : []
-    )
-    .concat(argv.mode === 'production' ? [new CompressionWebpackPlugin()] : []),
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+      chunkFilename: '[id].css'
+    }),
+    new CleanWebpackPlugin({
+      verbose: isDev(argv.mode),
+      cleanOnceBeforeBuildPatterns: ['artifacts', '*.gz', '*.js', '*.css']
+    }),
+    new Visualizer({
+      filename: './artifacts/stats.html'
+    })
+  ],
   stats: {
     colors: true
   }
