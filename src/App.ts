@@ -22,8 +22,8 @@ export default class App extends Component {
         'hue-remote',
         'cluster-cleanup',
         'colorcode',
-        'docker-dashboard',
-        'simple-load-tester'
+        'simple-load-tester',
+        'federator'
       ]
     };
   }
