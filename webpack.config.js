@@ -6,21 +6,21 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const Visualizer = require('webpack-visualizer-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const isDev = mode => mode === 'development';
-const isProd = mode => mode === 'production';
+const isDev = (mode) => mode === 'development';
+const isProd = (mode) => mode === 'production';
 
 module.exports = (_, argv) => ({
   entry: ['./src/index.ts', './src/index.scss'],
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: '[name].js'
+    filename: '[name].js',
   },
   module: {
     rules: [
       {
         test: /\.ts$/,
         exclude: /node_modules/,
-        use: 'ts-loader'
+        use: 'ts-loader',
       },
       {
         test: /\.(sa|sc|c)ss$/,
@@ -29,12 +29,12 @@ module.exports = (_, argv) => ({
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              hmr: isDev(argv.mode)
-            }
+              hmr: isDev(argv.mode),
+            },
           },
           {
             loader: 'css-loader',
-            options: { importLoaders: 2 }
+            options: { importLoaders: 2 },
           },
           {
             loader: 'postcss-loader',
@@ -43,36 +43,36 @@ module.exports = (_, argv) => ({
               plugins: () =>
                 isProd(argv.mode)
                   ? [autoprefixer(), cssnano()]
-                  : [autoprefixer()]
-            }
+                  : [autoprefixer()],
+            },
           },
-          'sass-loader'
-        ]
+          'sass-loader',
+        ],
       },
       {
         test: /\.svg$/,
         exclude: /node_modules/,
-        use: 'svg-inline-loader'
-      }
-    ]
+        use: 'svg-inline-loader',
+      },
+    ],
   },
   resolve: {
-    extensions: ['.ts', '.js', '.css']
+    extensions: ['.ts', '.js', '.css'],
   },
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].css',
-      chunkFilename: '[id].css'
+      chunkFilename: '[id].css',
     }),
     new CleanWebpackPlugin({
       verbose: isDev(argv.mode),
-      cleanOnceBeforeBuildPatterns: ['artifacts', '*.gz', '*.js', '*.css']
+      cleanOnceBeforeBuildPatterns: ['artifacts', '*.gz', '*.js', '*.css'],
     }),
     new Visualizer({
-      filename: './artifacts/stats.html'
-    })
+      filename: './artifacts/stats.html',
+    }),
   ],
   stats: {
-    colors: true
-  }
+    colors: true,
+  },
 });
