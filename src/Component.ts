@@ -17,4 +17,21 @@ export default class Component {
   public render(props?: object): string {
     return '';
   }
+
+  protected callClassFunction(
+    name: string,
+    ...args: (string | number | boolean)[]
+  ) {
+    const argsString = args
+      .map((a) => {
+        if (typeof a === 'string') {
+          return `'${a}'`;
+        } else {
+          return a.toString();
+        }
+      })
+      .join(', ');
+
+    return `document.componentRegistry['${this.id}'].${name}(${argsString})`;
+  }
 }

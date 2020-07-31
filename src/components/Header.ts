@@ -27,12 +27,12 @@ export default class Header extends Component {
       {
         name: 'Blog',
         href: 'https://medium.com/@yash.kulshrestha',
-        external: true
-      }
+        external: true,
+      },
     ];
     const renderedAnchors = anchors
       .map(
-        a =>
+        (a) =>
           `<a class="header-anchor" href="${a.href}" ${
             a.external ? 'target="_blank"' : ''
           }>${a.name}</a>`
@@ -47,9 +47,7 @@ export default class Header extends Component {
         </div>
         <div
           class="anchor-menu-button"
-          onClick="document.componentRegistry['${
-            this.id
-          }'].handleMenuArrowClick()">
+          onClick="${this.callClassFunction('handleMenuArrowClick')}">
           ${arrowDown}
         </div>
       </div>
