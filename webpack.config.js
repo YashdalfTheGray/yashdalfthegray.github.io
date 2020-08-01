@@ -15,6 +15,7 @@ module.exports = (_, argv) => ({
     path: path.resolve(__dirname, './dist'),
     filename: '[name].js',
   },
+  mode: argv.mode,
   module: {
     rules: [
       {
