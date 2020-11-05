@@ -2,7 +2,6 @@ import * as svgModule from '*.svg';
 
 import * as email from './icons/email.svg';
 import * as github from './icons/github.svg';
-import * as googleplus from './icons/googleplus.svg';
 import * as linkedin from './icons/linkedin.svg';
 import * as steam from './icons/steam.svg';
 import * as twitch from './icons/twitch.svg';
@@ -23,51 +22,45 @@ const contacts: IContact[] = [
     id: 'github',
     name: 'Github',
     link: 'https://github.com/YashdalfTheGray',
-    icon: github
+    icon: github,
   },
   {
     id: 'twitter',
     name: 'Twitter',
     link: 'https://twitter.com/YashdalfTheGray',
-    icon: twitter
+    icon: twitter,
   },
   {
     id: 'linkedIn',
     name: 'LinkedIn',
     link: 'https://www.linkedin.com/in/yash-kulshrestha-00847965',
-    icon: linkedin
+    icon: linkedin,
   },
   {
     id: 'steam',
     name: 'Steam',
     link: 'http://steamcommunity.com/id/YashdalfTheGray/',
-    icon: steam
+    icon: steam,
     // iconBackground: '#425F99'
   },
   {
     id: 'twitch',
     name: 'Twitch',
     link: 'https://www.twitch.tv/yashdalfthegray',
-    icon: twitch
+    icon: twitch,
   },
   {
     id: 'youtube',
     name: 'Youtube',
     link: 'https://www.youtube.com/channel/UCWcKiD0E1CyjvY4CSN_Ealw',
-    icon: youtube
-  },
-  {
-    id: 'googlePlus',
-    name: 'Google+',
-    link: 'https://plus.google.com/+YashKulshrestha12',
-    icon: googleplus
+    icon: youtube,
   },
   {
     id: 'email',
     name: 'Email',
     link: 'mailto:contact@yashkulshrestha.com',
-    icon: email
-  }
+    icon: email,
+  },
 ];
 
 export default contacts;
