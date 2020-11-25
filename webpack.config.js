@@ -27,12 +27,7 @@ module.exports = (_, argv) => ({
         test: /\.(sa|sc|c)ss$/,
         exclude: /node_modules/,
         use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              hmr: isDev(argv.mode),
-            },
-          },
+          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: { importLoaders: 2 },
