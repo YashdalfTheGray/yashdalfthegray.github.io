@@ -3,7 +3,7 @@ const path = require('path');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const Visualizer = require('webpack-visualizer-plugin');
+const Visualizer = require('webpack-visualizer-plugin2');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const isDev = (mode) => mode === 'development';
