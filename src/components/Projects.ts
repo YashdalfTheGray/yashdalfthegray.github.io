@@ -15,7 +15,7 @@ export default class Projects extends Component {
   constructor(projects: string[]) {
     super('projects');
     this.state = {
-      projectDetails: []
+      projectDetails: [],
     };
 
     setTimeout(() => this.getProjectDetails.bind(this, projects)());
@@ -30,7 +30,7 @@ export default class Projects extends Component {
     } else {
       // TODO - yashdalfthegray 8/1 error logic because github throttles are real
       this.state.projectDetails = await Promise.all(
-        projects.map(async p => {
+        projects.map(async (p) => {
           const response = await fetch(
             `https://api.github.com/repos/yashdalfthegray/${p}`
           );
@@ -54,7 +54,7 @@ export default class Projects extends Component {
   }
 
   public renderProjects(projects: IRepoOrError[]) {
-    const toShow = projects.filter(p => !p.message);
+    const toShow = projects.filter((p) => !p.message);
 
     if (toShow.length === 0) {
       return this.renderFallback();
@@ -62,9 +62,9 @@ export default class Projects extends Component {
 
     return `
       <div class="projects-section">
-        <p>These are some of my pet projects on Github!</p>
+        <p>These are some of my projects on Github!</p>
         <div class="projects-list">
-          ${projects.map(p => new ProjectCard().render(p)).join('\n')}
+          ${projects.map((p) => new ProjectCard().render(p)).join('\n')}
         </div>
       </div>
     `;
