@@ -4,7 +4,7 @@
   "description": "There are many like it but this one is mine",
   "main": "dist/index.js",
   "scripts": {
-    "build": "webpack --mode=development",
+    "dev-build": "webpack --mode=development",
     "watch-build": "webpack --mode=development --watch",
     "prod-build": "webpack --mode=production",
     "server": "http-server ./ -p 8000",
