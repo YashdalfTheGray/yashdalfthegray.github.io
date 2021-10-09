@@ -64,7 +64,7 @@ export default class Projects extends Component {
       <div class="projects-section">
         <p>These are some of my projects on Github!</p>
         <div class="projects-list">
-          ${projects.map((p) => new ProjectCard().render(p)).join('\n')}
+          ${toShow.map((p) => new ProjectCard().render(p)).join('\n')}
         </div>
       </div>
     `;
