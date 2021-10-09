@@ -1,5 +1,5 @@
 /* variables */
-$easeOutCirc: cubic-bezier(0.075, 0.820, 0.165, 1.000);
+$easeOutCirc: cubic-bezier(0.075, 0.82, 0.165, 1);
 
 /* mixins */
 @mixin for-phone-only {
@@ -37,15 +37,15 @@ $easeOutCirc: cubic-bezier(0.075, 0.820, 0.165, 1.000);
 /* general styles */
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Hind', sans-serif;
   margin: 0px;
 }
 
-.h-list *+* {
+.h-list * + * {
   margin-left: 8px;
 }
 
-.v-list *+* {
+.v-list * + * {
   margin-top: 8px;
 }
 
@@ -123,7 +123,7 @@ body {
     padding-bottom: 0px;
   }
 
-  *+* {
+  * + * {
     margin-left: 16px;
   }
 
@@ -243,10 +243,9 @@ body {
   .card-language {
     font-style: italic;
     color: #757575;
-
   }
 
-  *+* {
+  * + * {
     margin-top: 16px;
   }
 }
