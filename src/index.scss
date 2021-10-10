@@ -1,6 +1,15 @@
 /* variables */
 $easeOutCirc: cubic-bezier(0.075, 0.82, 0.165, 1);
 
+/* theme */
+$primary: #82b1ff;
+$primaryDark: #4d82cb;
+$primaryText: #000;
+$secondaryText: #fff;
+$tertiaryText: #757575;
+$quaternaryText: #e0e0e0;
+$visitedLink: #6955cb;
+
 /* mixins */
 @mixin for-phone-only {
   @media (max-width: 599px) {
@@ -119,7 +128,7 @@ body {
   }
 
   a:hover {
-    border-bottom: solid 2px #82b1ff;
+    border-bottom: solid 2px $primary;
     padding-bottom: 0px;
   }
 
@@ -164,7 +173,7 @@ body {
   }
 
   a:hover {
-    border-bottom: solid 2px #82b1ff;
+    border-bottom: solid 2px $primary;
     padding-bottom: 0px;
   }
 
@@ -189,15 +198,15 @@ body {
   @extend .section-margin;
 
   a {
-    color: #000;
+    color: $primaryText;
     transition: all 0.5s $easeOutCirc;
 
     &:hover,
     &:focus {
-      color: #4d82cb;
+      color: $primaryDark;
 
       &:visited {
-        color: #6955cb;
+        color: $visitedLink;
       }
     }
   }
@@ -228,7 +237,7 @@ body {
 .project-card {
   height: 12rem;
   width: 24rem;
-  border: solid 2px #e0e0e0;
+  border: solid 2px $quaternaryText;
   transition: all 0.25s ease-out;
   @extend .flex-row;
   justify-content: flex-start;
@@ -238,7 +247,7 @@ body {
 
   &:hover {
     box-shadow: unset;
-    border: solid 2px #82b1ff;
+    border: solid 2px $primary;
   }
 
   a {
@@ -255,7 +264,7 @@ body {
 
   .card-language {
     font-style: italic;
-    color: #757575;
+    color: $tertiaryText;
   }
 
   * + * {
@@ -279,11 +288,11 @@ body {
     padding: 14px;
     border: 2px solid;
     border-radius: 50%;
-    border-color: #e0e0e0;
+    border-color: $quaternaryText;
     transition: all 0.5s $easeOutCirc;
 
     &:hover {
-      border: solid 2px #82b1ff;
+      border: solid 2px $primary;
     }
 
     a {
@@ -302,10 +311,10 @@ body {
 
   p {
     font-size: 12px;
-    color: #909090;
+    color: $tertiaryText;
 
     a {
-      color: #909090;
+      color: $tertiaryText;
     }
   }
 }
