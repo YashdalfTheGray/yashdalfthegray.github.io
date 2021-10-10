@@ -1,0 +1,21 @@
+@use '../common' as *;
+
+.projects-fallback {
+  @extend .section-margin;
+}
+
+.projects-section {
+  @extend .flex-column;
+  @extend .section-margin;
+}
+
+.projects-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+
+  .project-card {
+    margin: 0.5rem;
+  }
+}

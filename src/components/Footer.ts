@@ -1,5 +1,7 @@
 import Component from '../Component';
 
+import './Footer.scss';
+
 export default class Footer extends Component {
   constructor() {
     super('footer');

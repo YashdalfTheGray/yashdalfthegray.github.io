@@ -1,0 +1,17 @@
+@use '../common' as *;
+
+.footer {
+  @extend .section-margin;
+  @extend .flex-row;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    font-size: 12px;
+    color: $tertiaryText;
+
+    a {
+      color: $tertiaryText;
+    }
+  }
+}

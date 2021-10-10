@@ -1,0 +1,39 @@
+@use '../common' as *;
+
+.project-card {
+  height: 12rem;
+  width: 24rem;
+  border: solid 2px $quaternaryText;
+  transition: all 0.25s ease-out;
+  @extend .flex-row;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 8px;
+
+  &:hover {
+    box-shadow: unset;
+    border: solid 2px $primary;
+  }
+
+  a {
+    @extend .anchor-link;
+    padding: 8px;
+    @extend .flex-column;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .card-heading {
+    font-weight: bold;
+  }
+
+  .card-language {
+    font-style: italic;
+    color: $tertiaryText;
+  }
+
+  * + * {
+    margin-top: 16px;
+  }
+}

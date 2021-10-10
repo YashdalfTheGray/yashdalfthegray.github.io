@@ -1,0 +1,28 @@
+@use '../common' as *;
+
+.contacts-list {
+  @extend .section-margin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+
+  span {
+    margin: 8px;
+    width: 32px;
+    height: 32px;
+    padding: 14px;
+    border: 2px solid;
+    border-radius: 50%;
+    border-color: $quaternaryText;
+    transition: all 0.5s $easeOutCirc;
+
+    &:hover {
+      border: solid 2px $primary;
+    }
+
+    a {
+      cursor: pointer;
+    }
+  }
+}

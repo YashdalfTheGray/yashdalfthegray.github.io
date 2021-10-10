@@ -1,6 +1,8 @@
 import Component from '../Component';
 import * as refresh from '../icons/refresh.svg';
 
+import './Loading.scss';
+
 export default class Loading extends Component {
   constructor() {
     super('loading');

@@ -2,6 +2,8 @@ import Component from '../Component';
 import contacts, { IContact } from '../contacts';
 import ContactLink from './ContactLink';
 
+import './Contact.scss';
+
 interface IContactState {
   contacts: IContact[];
 }
@@ -20,7 +22,9 @@ export default class Contact extends Component {
         <a class="anchor-link" name="contact">Contact</a>
       </h2>
       <div class="contacts-list">
-        ${this.state.contacts.map(c => new ContactLink().render(c)).join('\n')}
+        ${this.state.contacts
+          .map((c) => new ContactLink().render(c))
+          .join('\n')}
       </div>
     `;
   }

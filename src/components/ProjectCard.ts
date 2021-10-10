@@ -2,6 +2,8 @@ import Component from '../Component';
 
 import { IGithubRepo } from '../types';
 
+import './ProjectCard.scss';
+
 export default class ProjectCard extends Component {
   constructor() {
     super('projectcard');

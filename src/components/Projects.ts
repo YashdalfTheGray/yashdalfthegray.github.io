@@ -5,6 +5,7 @@ import { IRepoOrError } from '../types';
 import Loading from './Loading';
 import ProjectCard from './ProjectCard';
 
+import './Projects.scss';
 interface IProjectState {
   projectDetails: IRepoOrError[];
 }
