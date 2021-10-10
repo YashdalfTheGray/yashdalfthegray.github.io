@@ -187,6 +187,20 @@ body {
 
 .about-section {
   @extend .section-margin;
+
+  a {
+    color: #000;
+    transition: all 0.5s $easeOutCirc;
+
+    &:hover,
+    &:focus {
+      color: #4d82cb;
+
+      &:visited {
+        color: #6955cb;
+      }
+    }
+  }
 }
 
 /* projects styles */
