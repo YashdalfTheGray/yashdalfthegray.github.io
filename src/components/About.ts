@@ -1,5 +1,7 @@
 import Component from '../Component';
 
+import './About.scss';
+
 export default class About extends Component {
   constructor() {
     super('about');

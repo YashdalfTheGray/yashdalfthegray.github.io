@@ -1,92 +1,10 @@
-/* variables */
-$easeOutCirc: cubic-bezier(0.075, 0.82, 0.165, 1);
+@use 'common' as *;
 
-/* theme */
-$primary: #82b1ff;
-$primaryDark: #4d82cb;
-$primaryText: #000;
-$secondaryText: #fff;
-$tertiaryText: #757575;
-$quaternaryText: #e0e0e0;
-$visitedLink: #6955cb;
-
-/* mixins */
-@mixin for-phone-only {
-  @media (max-width: 599px) {
-    @content;
-  }
-}
-
-@mixin for-tablet-portrait-up {
-  @media (min-width: 600px) {
-    @content;
-  }
-}
-
-@mixin for-tablet-landscape-up {
-  @media (min-width: 900px) {
-    @content;
-  }
-}
-
-@mixin for-desktop-up {
-  @media (min-width: 1200px) {
-    @content;
-  }
-}
-
-/* animations */
-
-@keyframes spin {
-  100% {
-    transform: rotate(-360deg);
-  }
-}
-
-/* general styles */
+/* global styles */
 
 body {
   font-family: 'Hind', sans-serif;
   margin: 0px;
-}
-
-.h-list * + * {
-  margin-left: 8px;
-}
-
-.v-list * + * {
-  margin-top: 8px;
-}
-
-.flex-row {
-  display: flex;
-  flex-direction: row;
-}
-
-.flex-column {
-  display: flex;
-  flex-direction: column;
-}
-
-.flex-item-static {
-  flex: 0 1 auto;
-}
-
-.flex-item-dynamic {
-  flex: 1 1 auto;
-}
-
-.section-heading {
-  margin: 16px;
-}
-
-.section-margin {
-  margin: 8px 16px;
-}
-
-.anchor-link {
-  color: #000;
-  text-decoration: none;
 }
 
 /* loading styles */
@@ -190,26 +108,6 @@ body {
 
 .hero-banner img {
   width: 100%;
-}
-
-/* about styles */
-
-.about-section {
-  @extend .section-margin;
-
-  a {
-    color: $primaryText;
-    transition: all 0.5s $easeOutCirc;
-
-    &:hover,
-    &:focus {
-      color: $primaryDark;
-
-      &:visited {
-        color: $visitedLink;
-      }
-    }
-  }
 }
 
 /* projects styles */

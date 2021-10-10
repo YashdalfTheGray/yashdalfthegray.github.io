@@ -1,0 +1,21 @@
+@use '../common' as *;
+
+/* about styles */
+
+.about-section {
+  @extend .section-margin;
+
+  a {
+    color: $primaryText;
+    transition: all 0.5s $easeOutCirc;
+
+    &:hover,
+    &:focus {
+      color: $primaryDark;
+
+      &:visited {
+        color: $visitedLink;
+      }
+    }
+  }
+}
