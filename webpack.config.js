@@ -5,6 +5,7 @@ const cssnano = require('cssnano');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const Visualizer = require('webpack-visualizer-plugin2');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 const isDev = (mode) => mode === 'development';
 const isProd = (mode) => mode === 'production';
@@ -69,6 +70,9 @@ module.exports = (_, argv) => ({
       filename: './artifacts/stats.html',
     }),
   ],
+  optimization: {
+    minimizer: [new CssMinimizerPlugin()],
+  },
   stats: {
     colors: true,
   },
