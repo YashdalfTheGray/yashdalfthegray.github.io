@@ -6,6 +6,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const Visualizer = require('webpack-visualizer-plugin2');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 const isDev = (mode) => mode === 'development';
 const isProd = (mode) => mode === 'production';
@@ -71,8 +72,13 @@ module.exports = (_, argv) => ({
     }),
   ],
   optimization: {
-    minimize: true,
-    minimizer: ['...', new CssMinimizerPlugin()],
+    minimize: isProd(argv.mode),
+    minimizer: [
+      new TerserPlugin({
+        extractComments: false,
+      }),
+      new CssMinimizerPlugin(),
+    ],
   },
   stats: {
     colors: true,
