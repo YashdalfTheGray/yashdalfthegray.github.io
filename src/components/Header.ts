@@ -1,6 +1,8 @@
 import Component from '../Component';
 import * as arrowDown from '../icons/arrowdown.svg';
 
+import './Header.scss';
+
 export default class Header extends Component {
   constructor() {
     super('header');
@@ -40,9 +42,9 @@ export default class Header extends Component {
       .join('\n');
 
     return `
-      <div class="header flex-row">
+      <div class="header">
         <span class="title">Yash Kulshrestha</span>
-        <div class="flex-row h-list anchor-bar">
+        <div class="anchor-bar">
           ${renderedAnchors}
         </div>
         <div
@@ -51,7 +53,7 @@ export default class Header extends Component {
           ${arrowDown}
         </div>
       </div>
-      <div class="anchor-menu flex-column">
+      <div class="anchor-menu">
         ${renderedAnchors}
       </div>
     `;

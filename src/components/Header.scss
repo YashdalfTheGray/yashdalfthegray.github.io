@@ -1,0 +1,85 @@
+@use '../common' as *;
+
+.header {
+  @extend .flex-row;
+  margin: 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  margin: 8px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.anchor-bar {
+  @extend .flex-row;
+  @extend .h-list;
+
+  margin-right: 8px;
+
+  a {
+    @extend .anchor-link;
+    font-size: 16px;
+    padding: 2px 0px;
+  }
+
+  a:hover {
+    border-bottom: solid 2px $primary;
+    padding-bottom: 0px;
+  }
+
+  * + * {
+    margin-left: 16px;
+  }
+
+  @include for-phone-only {
+    display: none;
+  }
+}
+
+.anchor-menu-button {
+  margin-right: 8px;
+
+  svg {
+    width: 32px;
+    height: 32px;
+    transition: all 0.5s $easeOutCirc;
+  }
+
+  &.activated svg {
+    transform: rotate(180deg);
+  }
+
+  @include for-tablet-portrait-up {
+    display: none;
+  }
+}
+
+.anchor-menu {
+  justify-content: space-evenly;
+  align-items: center;
+  display: none;
+  transition: all 0.5s $easeOutCirc;
+
+  a {
+    @extend .anchor-link;
+    font-size: 16px;
+    margin: 8px;
+    padding: 2px 0px;
+  }
+
+  a:hover {
+    border-bottom: solid 2px $primary;
+    padding-bottom: 0px;
+  }
+
+  &.visible {
+    display: flex;
+  }
+
+  @include for-tablet-portrait-up {
+    display: none;
+  }
+}
