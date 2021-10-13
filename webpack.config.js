@@ -12,7 +12,7 @@ const isDev = (mode) => mode === 'development';
 const isProd = (mode) => mode === 'production';
 
 module.exports = (_, argv) => ({
-  entry: ['./src/index.ts', './src/index.scss'],
+  entry: ['./src/index.ts'],
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: '[name].js',
