@@ -71,7 +71,8 @@ module.exports = (_, argv) => ({
     }),
   ],
   optimization: {
-    minimizer: [new CssMinimizerPlugin()],
+    minimize: true,
+    minimizer: ['...', new CssMinimizerPlugin()],
   },
   stats: {
     colors: true,
