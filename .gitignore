@@ -1,5 +1,6 @@
 ### Project ###
 dist/artifacts
+dist/*.txt
 
 # Created by https://www.gitignore.io/api/node,linux,macos,windows
 
