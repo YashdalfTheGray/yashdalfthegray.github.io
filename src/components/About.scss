@@ -2,6 +2,7 @@
 
 .about-section {
   @extend .section-margin;
+  color: $primaryText;
 
   a {
     color: $primaryText;
