@@ -82,3 +82,19 @@ $visitedLink: #6955cb;
   color: $primaryText;
   text-decoration: none;
 }
+
+.custom-link {
+  a {
+    color: $primaryText;
+    transition: all 0.5s $easeOutCirc;
+
+    &:hover,
+    &:focus {
+      color: $primaryDark;
+
+      &:visited {
+        color: $visitedLink;
+      }
+    }
+  }
+}
