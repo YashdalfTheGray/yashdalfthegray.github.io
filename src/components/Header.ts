@@ -9,15 +9,18 @@ export default class Header extends Component {
   }
 
   public handleMenuArrowClick() {
+    const header = document.querySelector('.header');
     const arrowDiv = document.querySelector('.header .anchor-menu-button');
     const anchorMenu = document.querySelector('.anchor-menu');
 
     if (arrowDiv.classList.contains('activated')) {
       arrowDiv.classList.remove('activated');
       anchorMenu.classList.remove('visible');
+      header.classList.remove('no-bottom-margin');
     } else {
       arrowDiv.classList.add('activated');
       anchorMenu.classList.add('visible');
+      header.classList.add('no-bottom-margin');
     }
   }
 
