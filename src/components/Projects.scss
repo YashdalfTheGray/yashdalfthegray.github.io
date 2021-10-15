@@ -2,11 +2,18 @@
 
 .projects-fallback {
   @extend .section-margin;
+  @extend .custom-link;
+
+  color: $primaryText;
 }
 
 .projects-section {
   @extend .flex-column;
   @extend .section-margin;
+
+  p {
+    color: $primaryText;
+  }
 }
 
 .projects-list {
