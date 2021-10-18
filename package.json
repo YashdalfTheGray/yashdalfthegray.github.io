@@ -15,8 +15,10 @@
     "autoprefixer-info": "npx autoprefixer --info",
     "show-stats": "npx open ./dist/artifacts/stats.html",
     "show-prod-website": "npx open ./index.html",
-    "test": "npm run e2e-tests",
-    "e2e-tests": "WEBSITE_URL=http://127.0.0.1:8000 ava"
+    "test": "npm run local-integ-tests",
+    "local-integ-tests": "WEBSITE_URL=http://127.0.0.1:8000 ava",
+    "prod-integ-tests": "WEBSITE_URL=https://yashkulshrestha.com ava",
+    "update-snapshots": "WEBSITE_URL=http://127.0.0.1:8000 ava --update-snapshots"
   },
   "repository": {
     "type": "git",
@@ -72,8 +74,12 @@
     "extensions": [
       "ts"
     ],
+    "files": [
+      "test/*.spec.ts"
+    ],
     "require": [
       "ts-node/register"
-    ]
+    ],
+    "snapshotDir": "artifacts/snapshots"
   }
 }
