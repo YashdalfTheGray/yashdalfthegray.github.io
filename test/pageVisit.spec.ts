@@ -1,7 +1,7 @@
 import test from 'ava';
 import { withPage } from './utils/withPage';
 
-test.serial('canary', withPage, async (t, page) => {
+test.serial('visiting the page works', withPage, async (t, page) => {
   await page.goto(process.env.WEBSITE_URL);
   const contactsListElements = await page.$$('.contacts-list span');
 
