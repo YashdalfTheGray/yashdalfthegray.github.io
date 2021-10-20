@@ -1,5 +1,5 @@
 import * as puppeteer from 'puppeteer';
-import { ExecutionContext, Implementation, ImplementationResult } from 'ava';
+import { ExecutionContext, ImplementationResult } from 'ava';
 
 export type ImplementationWithPage<T> = (
   t: ExecutionContext<T>,
