@@ -17,7 +17,7 @@
     "lib": ["dom", "esnext", "esnext.array", "esnext.asynciterable"]
   },
   "filesGlob": ["./src/**/*.ts"],
-  "exclude": ["node_modules", "dist", "./src/**/*.spec.*"],
+  "exclude": ["node_modules", "dist", "./src/**/*.spec.*", "render/**"],
   "compileOnSave": false,
   "buildOnSave": false,
   "atom": {
