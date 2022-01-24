@@ -1,5 +1,5 @@
 import * as puppeteer from 'puppeteer';
-import { ExecutionContext, ImplementationResult } from 'ava';
+import { ExecutionContext } from 'ava';
 
 import {
   setupGithubRequestInterception,
@@ -14,7 +14,7 @@ export type ImplementationWithScaffolding<T> = (
   t: ExecutionContext<T>,
   page: puppeteer.Page,
   unsub: Unsubscriber
-) => ImplementationResult;
+) => void;
 
 export async function withPage<T>(
   t: ExecutionContext<T>,
