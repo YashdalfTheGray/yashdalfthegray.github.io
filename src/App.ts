@@ -18,13 +18,13 @@ export default class App extends Component {
     super('app');
     this.state = {
       projectsList: [
-        'auto-ngtemplate-loader',
-        'hue-remote',
-        'cluster-cleanup',
+        'federator',
         'colorcode',
+        'cluster-cleanup',
         'simple-load-tester',
-        'federator'
-      ]
+        'huproxy',
+        'bingo',
+      ],
     };
   }
 

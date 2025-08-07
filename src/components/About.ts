@@ -15,8 +15,8 @@ export default class About extends Component {
       </h2>
       <div class="about-section">
         <p>Hi! I'm Yash, a Buckeye living in Seattle.</p>
-        <p>I work for the <a href="https://aws.amazon.com/ecs/" target="_blank">Amazon Elastic Container Service</a> by day. I experiment and learn through open-source contributions by night. I most commonly do stuff related to Docker, Ruby, container orchestration, Golang, Rust, React, Node.js, Typescript, Express.js, Webpack, Javascript testing, and UI testing.</p>
-        <p>I read, game and stream, tinker with electronics, and keep up with Ohio State Football as much as I can in my free time.</p>
+        <p>I work for <a href="https://aws.amazon.com/route53/">Amazon Route53</a> and previously worked for <a href="https://aws.amazon.com/ecs/" target="_blank">Amazon Elastic Container Service</a>. I experiment and learn through open-source contributions in my free time. I most commonly do stuff related to Docker, Ruby, container orchestration, Golang, Node.js, Typescript. I also have a homelab setup that I keep tinkering with.</p>
+        <p>I read, game and stream, tinker with electronics and 3D printing, and keep up with Ohio State Football as much as I can in my free time.</p>
         <p>Go bucks! O-H!</p>
       </div>
     `;
