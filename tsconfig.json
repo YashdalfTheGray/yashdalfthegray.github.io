@@ -13,7 +13,6 @@
     "removeComments": true,
     "noLib": false,
     "preserveConstEnums": true,
-    "suppressImplicitAnyIndexErrors": true,
     "lib": ["dom", "esnext", "esnext.array", "esnext.asynciterable"]
   },
   "filesGlob": ["./src/**/*.ts"],
